@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "SuikaGame Hack",
+    "version": "1.0",
+    "permissions": [
+        "declarativeNetRequest",
+        "storage",
+        "scripting",
+        "tabs",
+        "activeTab",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "declarative_net_request": {
+        "rule_resources": [{
+            "id": "ruleset_1",
+            "path": "rules.json",
+            "enabled": true
+        }]
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [{
+        "resources": [
+            "*.js"
+        ], "matches": [
+            "*://*/*"
+        ]
+    }],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }],
+    "browser_action" : {
+        "default_icon" : "img/icons16.png",
+        "default_popup" : "popup.html"
+    }
+}

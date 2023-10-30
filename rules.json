@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+        "type": "redirect",
+            "redirect": {
+                "extensionPath": "/public/src/project.js"
+            }
+        },
+        "condition": {
+            "urlFilter": "||suikagame.com/public/src/project.js",
+            "resourceTypes": ["script"]
+        }
+    }
+]
